@@ -35,7 +35,7 @@ public class FragmentTwo extends Fragment {
         conference = (String) args.get("conference");
         View view = getView();
         if(view != null) {
-            
+
             TextView playerName = view.findViewById(R.id.playerName);
             playerName.setText(playerName.getText() + name);
 

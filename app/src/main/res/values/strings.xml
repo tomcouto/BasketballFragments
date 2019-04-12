@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LS09-Fragments</string>
+    <string name="app_name">BasketballFragments</string>
     <string name="player_name">Name:  </string>
     <string name="player_pos">Position:  </string>
     <string name="player_team">Team:  </string>
