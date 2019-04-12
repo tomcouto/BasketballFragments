@@ -106,14 +106,15 @@ public class MainActivity extends AppCompatActivity {
 
         protected void onPostExecute(ArrayList<String> allInf) {
 
-            FragmentTwo fragmentTwo = new FragmentTwo();
-            fragmentTwo.setName(allInf.get(0));
-            fragmentTwo.setPosition(allInf.get(1));
-            fragmentTwo.setTeam(allInf.get(2));
-            fragmentTwo.setDivision(allInf.get(3));
-            fragmentTwo.setConference(allInf.get(4));
+            Bundle args = new Bundle();
+            args.putString("name", allInf.get(0));
+            args.putString("position", allInf.get(1));
+            args.putString("team", allInf.get(2));
+            args.putString("division",allInf.get(3));
+            args.putString("conference",allInf.get(4));
 
             Fragment fr = new FragmentTwo();
+            fr.setArguments(args);
 
             FragmentManager fm = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fm.beginTransaction();

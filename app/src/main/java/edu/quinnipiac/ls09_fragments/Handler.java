@@ -26,9 +26,9 @@ public class Handler {
 
     //gets the player's position from JSON
     public String getPosition(String positionJsonStr) throws JSONException {
-        JSONObject positionJSONObj = new JSONObject(positionJsonStr);
-        pPosition = positionJSONObj.getString("position");
-        return pPosition;
+            JSONObject positionJSONObj = new JSONObject(positionJsonStr);
+            pPosition = positionJSONObj.getString("position");
+            return pPosition;
     }
 
     //gets player's team from JSON
@@ -51,12 +51,5 @@ public class Handler {
         pConf = conferenceJSONObj.getJSONObject("team").getString("conference");
         return pConf;
     }
-
-
-    public String getpName(){ return pName;}
-    public String getpPosition(){return pPosition;}
-    public String getpTeam(){return pTeam;}
-    public String getpDivision(){return pDivision;}
-    public String getpConf(){return pConf;}
 
 }

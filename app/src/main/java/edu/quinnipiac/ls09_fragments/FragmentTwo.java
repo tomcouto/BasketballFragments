@@ -23,33 +23,33 @@ public class FragmentTwo extends Fragment {
         // Required empty public constructor
     }
 
-    public void setName(String name){this.name = name;}
-    public void setTeam(String team){this.team = team;}
-    public void setPosition(String position){this.position = position;}
-    public void setDivision(String division){this.division = division;}
-    public void setConference(String conference){this.conference = conference;}
 
     @Override
     public void onStart() {
         super.onStart();
+        Bundle args = getArguments();
+        name = (String) args.get("name");
+        position = (String) args.get("position");
+        team = (String) args.get("team");
+        division = (String) args.get("division");
+        conference = (String) args.get("conference");
         View view = getView();
         if(view != null) {
-
-            Handler handler = new Handler();
+            
             TextView playerName = view.findViewById(R.id.playerName);
-            playerName.setText(playerName.getText() + handler.getpName());
+            playerName.setText(playerName.getText() + name);
 
             TextView playerTeam = view.findViewById(R.id.playerTeam);
-            playerTeam.setText(playerTeam.getText() + handler.getpTeam());
+            playerTeam.setText(playerTeam.getText() + team);
 
             TextView playerPosition = view.findViewById(R.id.playerPos);
-            playerPosition.setText(playerPosition.getText() + handler.getpPosition());
+            playerPosition.setText(playerPosition.getText() + position);
 
             TextView playerDivision = view.findViewById(R.id.playerDivision);
-            playerDivision.setText(playerDivision.getText() + handler.getpDivision());
+            playerDivision.setText(playerDivision.getText() + division);
 
             TextView playerConference = view.findViewById(R.id.playerConf);
-            playerConference.setText(playerConference.getText() + handler.getpConf());
+            playerConference.setText(playerConference.getText() + conference);
         }
     }
 
